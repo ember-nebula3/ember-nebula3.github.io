@@ -1,0 +1,1243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>npxvip全集 - 品牌影像门户,专注原创内容生态</title>
+<meta name="description" content="npxvip官方网站，深耕原创影像内容生态，汇聚专业创作者与高品质作品，以真实、温暖、创新的影像语言呈现npxvip全集品牌故事与精品内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312181f'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%23ff5a3c' stroke-width='4'/%3E%3Cpath d='M27 23 L45 32 L27 41 Z' fill='%23ff5a3c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --nv-bg:#0e1116;
+  --nv-panel:#151a21;
+  --nv-panel2:#1b222b;
+  --nv-line:#28313c;
+  --nv-text:#e8edf3;
+  --nv-sub:#9aa7b5;
+  --nv-accent:#ff5a3c;
+  --nv-accent2:#ffc93c;
+  --nv-cyan:#3cd4ff;
+  --nv-radius:14px;
+  --nv-sticky:96px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nv-sticky)}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--nv-bg);
+  color:var(--nv-text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+.nv-wrap{width:min(1180px,92%);margin:0 auto}
+
+/* ===== 吸顶区：公告条 + 页头 ===== */
+.nv-sticky-zone{position:sticky;top:0;z-index:80;background:rgba(14,17,22,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--nv-line)}
+.nv-notice{
+  display:flex;align-items:center;gap:12px;
+  font-size:13px;padding:8px 0;color:var(--nv-sub);
+  border-bottom:1px solid var(--nv-line);
+}
+.nv-notice .nv-wrap{display:flex;align-items:center;gap:12px;overflow:hidden}
+.nv-notice-badge{
+  flex:0 0 auto;font-size:11px;letter-spacing:.08em;color:#111;
+  background:var(--nv-accent2);border-radius:4px;padding:2px 8px;font-weight:700;
+}
+.nv-notice-track{overflow:hidden;white-space:nowrap;flex:1}
+.nv-notice-track span{display:inline-block;animation:nvMarquee 26s linear infinite;padding-left:100%}
+@keyframes nvMarquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.nv-header{padding:14px 0}
+.nv-header .nv-wrap{display:flex;align-items:center;gap:26px}
+.nv-brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.nv-brand-mark{
+  width:38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--nv-accent),#ff8a3c);
+  font-weight:800;font-size:15px;color:#fff;letter-spacing:.02em;
+}
+.nv-brand-txt strong{display:block;font-size:17px;letter-spacing:.04em}
+.nv-brand-txt em{font-style:normal;font-size:11px;color:var(--nv-sub);letter-spacing:.14em}
+.nv-nav{display:flex;gap:22px;font-size:14px;color:var(--nv-sub);flex:1}
+.nv-nav a{padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}
+.nv-nav a:hover{color:var(--nv-text);border-color:var(--nv-accent)}
+.nv-head-tools{display:flex;align-items:center;gap:10px}
+.nv-search{position:relative;display:flex;align-items:center}
+.nv-search input{
+  width:180px;background:var(--nv-panel2);border:1px solid var(--nv-line);
+  border-radius:999px;padding:8px 34px 8px 14px;color:var(--nv-text);font-size:13px;outline:none;transition:.25s;
+}
+.nv-search input:focus{width:220px;border-color:var(--nv-accent)}
+.nv-search button{position:absolute;right:4px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:13px;color:var(--nv-sub)}
+.nv-search button:hover{color:var(--nv-accent)}
+.nv-search-tip{
+  position:absolute;top:44px;right:0;background:var(--nv-panel2);border:1px solid var(--nv-line);
+  border-radius:10px;padding:8px 12px;font-size:12px;color:var(--nv-sub);white-space:nowrap;display:none;
+}
+.nv-search-tip.on{display:block}
+.nv-burger{display:none;width:38px;height:38px;border-radius:10px;border:1px solid var(--nv-line);font-size:16px;color:var(--nv-sub)}
+.nv-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:9px 18px;border-radius:999px;font-size:13px;font-weight:600;transition:.2s;
+}
+.nv-btn-primary{background:var(--nv-accent);color:#fff;box-shadow:0 6px 18px -6px rgba(255,90,60,.7)}
+.nv-btn-primary:hover{transform:translateY(-2px)}
+.nv-btn-ghost{border:1px solid var(--nv-line);color:var(--nv-sub)}
+.nv-btn-ghost:hover{border-color:var(--nv-accent);color:var(--nv-text)}
+
+/* ===== 首屏 ===== */
+.nv-hero{position:relative;padding:60px 0 70px;overflow:hidden;border-bottom:1px solid var(--nv-line)}
+.nv-hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(620px 340px at 82% 8%,rgba(255,90,60,.20),transparent 70%),
+    radial-gradient(520px 300px at 8% 82%,rgba(60,212,255,.12),transparent 70%);
+  pointer-events:none;
+}
+.nv-hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.nv-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.16em;
+  color:var(--nv-accent2);border:1px solid rgba(255,201,60,.4);border-radius:999px;
+  padding:5px 14px;margin-bottom:20px;
+}
+.nv-hero h1{font-size:clamp(38px,5.4vw,64px);line-height:1.1;letter-spacing:.01em;margin-bottom:18px}
+.nv-hero h1 span{color:var(--nv-accent)}
+.nv-hero-lead{font-size:15px;color:var(--nv-sub);max-width:520px;margin-bottom:14px}
+.nv-hero-intro{font-size:14px;color:#b9c4d0;max-width:540px;margin-bottom:26px;border-left:3px solid var(--nv-accent);padding-left:16px}
+.nv-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.nv-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:520px}
+.nv-stat{background:var(--nv-panel);border:1px solid var(--nv-line);border-radius:var(--nv-radius);padding:14px 16px}
+.nv-stat b{display:block;font-size:23px;color:var(--nv-accent2);letter-spacing:.02em}
+.nv-stat small{font-size:12px;color:var(--nv-sub)}
+.nv-hero-visual{position:relative}
+.nv-hero-shot{
+  position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--nv-line);
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.9);
+}
+.nv-hero-shot img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.nv-hero-play{
+  position:absolute;inset:0;display:grid;place-items:center;
+}
+.nv-hero-play i{
+  width:70px;height:70px;border-radius:50%;background:rgba(14,17,22,.55);
+  border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;font-style:normal;
+  color:#fff;font-size:22px;backdrop-filter:blur(4px);transition:.25s;
+}
+.nv-hero-shot:hover .nv-hero-play i{transform:scale(1.1);background:var(--nv-accent)}
+.nv-hero-mini{
+  position:absolute;right:-14px;bottom:-22px;width:59%;border-radius:14px;overflow:hidden;
+  border:1px solid var(--nv-line);box-shadow:0 20px 40px -20px #000;
+}
+.nv-hero-mini img{width:100%;aspect-ratio:16/9;object-fit:cover}
+
+/* ===== 公区标题 ===== */
+.nv-sec{padding:66px 0;border-bottom:1px solid var(--nv-line)}
+.nv-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:32px;flex-wrap:wrap}
+.nv-sec-head h2{font-size:clamp(23px,3vw,31px);letter-spacing:.02em}
+.nv-sec-head h2 em{font-style:normal;color:var(--nv-accent);margin-right:8px;font-size:.7em;vertical-align:middle}
+.nv-sec-head p{font-size:13px;color:var(--nv-sub);max-width:560px}
+.nv-sec-link{font-size:13px;color:var(--nv-accent2);white-space:nowrap}
+.nv-sec-link:hover{color:var(--nv-accent)}
+.nv-note{font-size:12px;color:var(--nv-sub);margin-top:10px}
+
+/* ===== 焦点区 ===== */
+.nv-focus-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:22px}
+.nv-card{
+  background:var(--nv-panel);border:1px solid var(--nv-line);border-radius:var(--nv-radius);
+  overflow:hidden;transition:.28s;position:relative;
+}
+.nv-card:hover{transform:translateY(-4px);border-color:#3a4655;box-shadow:0 22px 40px -24px #000}
+.nv-cover{position:relative;overflow:hidden}
+.nv-cover img{width:100%;object-fit:cover;transition:.45s}
+.nv-card:hover .nv-cover img{transform:scale(1.05)}
+.nv-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(8,10,14,.82))}
+.nv-cover .nv-tag{
+  position:absolute;left:12px;top:12px;z-index:2;font-size:11px;letter-spacing:.06em;
+  background:rgba(14,17,22,.7);border:1px solid var(--nv-line);color:var(--nv-accent2);
+  padding:3px 9px;border-radius:999px;backdrop-filter:blur(4px);
+}
+.nv-cover .nv-dur{
+  position:absolute;right:12px;bottom:12px;z-index:2;font-size:11px;
+  background:rgba(14,17,22,.75);padding:2px 8px;border-radius:5px;color:#cfd8e3;
+}
+.nv-focus-main .nv-cover img{aspect-ratio:16/9}
+.nv-focus-main .nv-body{padding:20px 22px 24px}
+.nv-focus-main h3{font-size:20px;margin-bottom:8px;line-height:1.4}
+.nv-focus-main p{font-size:13px;color:var(--nv-sub)}
+.nv-focus-side{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.nv-focus-side .nv-cover img{aspect-ratio:16/10}
+.nv-body{padding:13px 14px 16px}
+.nv-body h4{font-size:14px;line-height:1.5;margin-bottom:6px}
+.nv-meta{display:flex;align-items:center;gap:10px;font-size:11.5px;color:var(--nv-sub);flex-wrap:wrap}
+.nv-meta .nv-dot{width:3px;height:3px;border-radius:50%;background:var(--nv-sub)}
+.nv-ops{display:flex;gap:8px;margin-top:10px}
+.nv-op{
+  font-size:11.5px;color:var(--nv-sub);border:1px solid var(--nv-line);border-radius:999px;
+  padding:3px 10px;display:inline-flex;align-items:center;gap:5px;transition:.2s;
+}
+.nv-op:hover{color:var(--nv-text);border-color:#4a5768}
+.nv-op.on{color:var(--nv-accent);border-color:rgba(255,90,60,.5)}
+
+/* ===== 视频流 ===== */
+.nv-filter{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:24px}
+.nv-chip{
+  font-size:12.5px;color:var(--nv-sub);border:1px solid var(--nv-line);
+  border-radius:999px;padding:5px 14px;transition:.2s;
+}
+.nv-chip:hover{color:var(--nv-text)}
+.nv-chip.on{background:var(--nv-accent);border-color:var(--nv-accent);color:#fff}
+.nv-stream{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.nv-stream .nv-cover img{aspect-ratio:16/9}
+
+/* ===== 专题 ===== */
+.nv-special{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.nv-special-card{
+  border:1px solid var(--nv-line);border-radius:var(--nv-radius);overflow:hidden;
+  background:linear-gradient(160deg,var(--nv-panel2),var(--nv-panel));transition:.25s;
+}
+.nv-special-card:hover{border-color:var(--nv-accent)}
+.nv-special-card img{width:100%;aspect-ratio:16/8;object-fit:cover}
+.nv-special-body{padding:18px}
+.nv-special-body h3{font-size:16px;margin-bottom:8px}
+.nv-special-body p{font-size:12.5px;color:var(--nv-sub);margin-bottom:12px}
+.nv-badge{font-size:11px;color:var(--nv-cyan);border:1px solid rgba(60,212,255,.35);border-radius:999px;padding:2px 9px}
+
+/* ===== 创作者 ===== */
+.nv-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.nv-creator{
+  background:var(--nv-panel);border:1px solid var(--nv-line);border-radius:var(--nv-radius);
+  padding:22px 18px;text-align:center;transition:.25s;
+}
+.nv-creator:hover{transform:translateY(-4px);border-color:#3a4655}
+.nv-avatar{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;
+  font-size:22px;font-weight:700;color:#0e1116;letter-spacing:.02em;
+}
+.nv-creator h4{font-size:15px;margin-bottom:4px}
+.nv-creator .nv-field{font-size:11.5px;color:var(--nv-accent2);margin-bottom:8px}
+.nv-creator p{font-size:12px;color:var(--nv-sub);margin-bottom:12px;min-height:54px}
+.nv-creator .nv-nums{display:flex;justify-content:center;gap:16px;font-size:11.5px;color:var(--nv-sub);margin-bottom:12px}
+.nv-creator .nv-nums b{color:var(--nv-text);display:block;font-size:14px}
+
+/* ===== 故事随笔 ===== */
+.nv-stories{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.nv-story{
+  background:var(--nv-panel);border:1px solid var(--nv-line);border-radius:var(--nv-radius);
+  padding:24px 24px 20px;position:relative;
+}
+.nv-story::before{
+  content:"“";position:absolute;top:6px;right:18px;font-size:64px;color:rgba(255,90,60,.18);line-height:1;
+}
+.nv-story h3{font-size:16px;margin-bottom:10px}
+.nv-story p{font-size:13px;color:var(--nv-sub);margin-bottom:14px}
+.nv-story footer{font-size:12px;color:#728191}
+
+/* ===== 排行 ===== */
+.nv-rank{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.nv-rank-col{background:var(--nv-panel);border:1px solid var(--nv-line);border-radius:var(--nv-radius);padding:20px}
+.nv-rank-col h3{font-size:14px;color:var(--nv-accent2);margin-bottom:14px;letter-spacing:.05em}
+.nv-rank-col li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--nv-line);font-size:13px}
+.nv-rank-col li:last-child{border-bottom:none}
+.nv-rank-col li b{color:var(--nv-accent);font-size:12px;width:18px;flex:0 0 auto}
+.nv-rank-col li span{flex:1;color:#c6d0da;line-height:1.5}
+.nv-rank-col li em{font-style:normal;font-size:11.5px;color:var(--nv-sub)}
+
+/* ===== 评价 ===== */
+.nv-comments{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.nv-comment{
+  background:var(--nv-panel);border:1px solid var(--nv-line);border-radius:var(--nv-radius);
+  padding:18px;position:relative;
+}
+.nv-comment-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.nv-comment-head .nv-avatar{width:34px;height:34px;font-size:13px;margin:0}
+.nv-comment-head b{font-size:13px}
+.nv-comment-head small{font-size:11px;color:var(--nv-sub);display:block}
+.nv-comment p{font-size:12.5px;color:#b5c0cc}
+.nv-comment .nv-stars{color:var(--nv-accent2);font-size:12px;margin-top:10px;letter-spacing:2px}
+
+/* ===== FAQ ===== */
+.nv-faq{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.nv-faq details{
+  background:var(--nv-panel);border:1px solid var(--nv-line);border-radius:12px;
+  padding:16px 18px;transition:.2s;
+}
+.nv-faq details[open]{border-color:rgba(255,90,60,.5)}
+.nv-faq summary{font-size:14px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.nv-faq summary::-webkit-details-marker{display:none}
+.nv-faq summary::after{content:"+";color:var(--nv-accent);font-weight:400}
+.nv-faq details[open] summary::after{content:"−"}
+.nv-faq details p{font-size:12.5px;color:var(--nv-sub);margin-top:10px}
+
+/* ===== 动态/伙伴/联系 ===== */
+.nv-dynamics{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+.nv-timeline li{position:relative;padding:0 0 20px 26px;border-left:1px solid var(--nv-line)}
+.nv-timeline li:last-child{border-left-color:transparent}
+.nv-timeline li::before{
+  content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;border-radius:50%;
+  background:var(--nv-accent);box-shadow:0 0 0 4px rgba(255,90,60,.16);
+}
+.nv-timeline time{font-size:11.5px;color:var(--nv-accent2);letter-spacing:.04em}
+.nv-timeline h4{font-size:14px;margin:4px 0 4px}
+.nv-timeline p{font-size:12.5px;color:var(--nv-sub)}
+.nv-partners{display:flex;flex-wrap:wrap;gap:12px}
+.nv-partner{
+  font-size:12.5px;color:var(--nv-sub);border:1px solid var(--nv-line);
+  border-radius:10px;padding:14px 18px;flex:1 1 44%;text-align:center;transition:.2s;
+}
+.nv-partner:hover{color:var(--nv-text);border-color:#46525f}
+
+.nv-contact-card{
+  background:linear-gradient(150deg,var(--nv-panel2),var(--nv-panel));
+  border:1px solid var(--nv-line);border-radius:18px;padding:34px;
+  display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;
+}
+.nv-contact-card h2{font-size:clamp(20px,2.6vw,26px);margin-bottom:12px}
+.nv-contact-card p{font-size:13.5px;color:var(--nv-sub);margin-bottom:18px}
+.nv-contact-info{font-size:13px;color:var(--nv-sub);display:grid;gap:8px}
+.nv-contact-info b{color:var(--nv-text)}
+
+/* ===== 页脚 ===== */
+.nv-footer{padding:48px 0 30px;font-size:13px;color:var(--nv-sub)}
+.nv-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:34px}
+.nv-footer h4{font-size:13px;color:var(--nv-text);margin-bottom:12px;letter-spacing:.06em}
+.nv-footer li{margin-bottom:7px;font-size:12.5px}
+.nv-footer a:hover{color:var(--nv-accent)}
+.nv-footer-brand p{font-size:12.5px;margin-top:10px;line-height:1.7}
+.nv-footer-bottom{border-top:1px solid var(--nv-line);padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#6d7b89}
+
+/* ===== 返回顶部 & Toast ===== */
+.nv-top{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;
+  background:var(--nv-panel2);border:1px solid var(--nv-line);color:var(--nv-sub);
+  display:grid;place-items:center;font-size:16px;opacity:0;pointer-events:none;transition:.25s;z-index:70;
+}
+.nv-top.on{opacity:1;pointer-events:auto}
+.nv-top:hover{color:var(--nv-accent);border-color:var(--nv-accent)}
+.nv-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,16px);
+  background:#1f2833;border:1px solid var(--nv-line);color:var(--nv-text);
+  font-size:13px;padding:10px 20px;border-radius:999px;opacity:0;pointer-events:none;
+  transition:.28s;z-index:120;
+}
+.nv-toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ===== 弹窗 ===== */
+.nv-modal{
+  position:fixed;inset:0;background:rgba(6,8,11,.72);display:none;z-index:110;
+  align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px);
+}
+.nv-modal.on{display:flex}
+.nv-modal-box{
+  width:min(520px,100%);background:var(--nv-panel2);border:1px solid var(--nv-line);
+  border-radius:16px;padding:28px;position:relative;
+}
+.nv-modal-box h3{font-size:18px;margin-bottom:10px}
+.nv-modal-box p{font-size:13px;color:var(--nv-sub);margin-bottom:16px}
+.nv-modal-box input,.nv-modal-box textarea{
+  width:100%;background:var(--nv-bg);border:1px solid var(--nv-line);border-radius:10px;
+  padding:10px 12px;color:var(--nv-text);font-size:13px;margin-bottom:12px;outline:none;font-family:inherit;
+}
+.nv-modal-box input:focus,.nv-modal-box textarea:focus{border-color:var(--nv-accent)}
+.nv-modal-close{position:absolute;right:14px;top:12px;font-size:18px;color:var(--nv-sub)}
+.nv-modal-close:hover{color:var(--nv-accent)}
+
+@media(max-width:960px){
+  .nv-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;
+    background:var(--nv-panel);border-bottom:1px solid var(--nv-line);padding:8px 0;
+  }
+  .nv-nav.open{display:flex}
+  .nv-nav a{padding:11px 24px;border-bottom:1px solid var(--nv-line)}
+  .nv-burger{display:grid;place-items:center}
+  .nv-hero-grid,.nv-focus-grid,.nv-dynamics,.nv-contact-card{grid-template-columns:1fr}
+  .nv-hero-mini{display:none}
+  .nv-stream,.nv-special,.nv-comments,.nv-rank{grid-template-columns:1fr 1fr}
+  .nv-creators{grid-template-columns:1fr 1fr}
+  .nv-stories,.nv-faq{grid-template-columns:1fr}
+  .nv-footer-grid{grid-template-columns:1fr 1fr}
+  .nv-search input{width:130px}
+  .nv-search input:focus{width:150px}
+}
+@media(max-width:600px){
+  .nv-stream,.nv-special,.nv-comments,.nv-rank,.nv-creators,.nv-focus-side{grid-template-columns:1fr}
+  .nv-stats{grid-template-columns:1fr 1fr}
+  .nv-footer-grid{grid-template-columns:1fr}
+  .nv-hero{padding:40px 0 52px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶区 -->
+<div class="nv-sticky-zone">
+  <div class="nv-notice">
+    <div class="nv-wrap">
+      <span class="nv-notice-badge">官方发布</span>
+      <div class="nv-notice-track"><span>2026 冬季企划「npxvip 城市切片」征集启动，参与者可上传作品参与投票与挑战 · 新一季创作者扶持计划报名通道已开启 · npxvip全集品牌故事专题第 12 期上线</span></div>
+    </div>
+  </div>
+  <header class="nv-header">
+    <div class="nv-wrap">
+      <a class="nv-brand" href="#nv-home" aria-label="npxvip 官网首页">
+        <span class="nv-brand-mark">NP</span>
+        <span class="nv-brand-txt"><strong>npxvip</strong><em>OFFICIAL VIDEO</em></span>
+      </a>
+      <nav class="nv-nav" id="nvNav" aria-label="主导航">
+        <a href="#nv-home">首页</a>
+        <a href="#nv-focus">视频焦点</a>
+        <a href="#nv-stream">热门内容</a>
+        <a href="#nv-creators">创作者</a>
+        <a href="#nv-special">专题企划</a>
+        <a href="#nv-faq">帮助</a>
+        <a href="#nv-contact">联系</a>
+      </nav>
+      <div class="nv-head-tools">
+        <div class="nv-search">
+          <input id="nvSearchInput" type="search" placeholder="搜索作品 / 创作者 / 专题" aria-label="站内搜索">
+          <button id="nvSearchBtn" type="button" aria-label="搜索">⌕</button>
+          <div class="nv-search-tip" id="nvSearchTip"></div>
+        </div>
+        <button class="nv-btn nv-btn-primary" id="nvSubmitBtn" type="button">投稿入口</button>
+        <button class="nv-burger" id="nvBurger" type="button" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<!-- 首屏 -->
+<section class="nv-hero" id="nv-home">
+  <div class="nv-wrap nv-hero-grid">
+    <div>
+      <span class="nv-kicker">NPXVIP 品牌官网 · 原创影像内容生态</span>
+      <h1>npxvip</h1>
+      <p class="nv-hero-lead">让真实的影像被看见，让专业的内容被记住。</p>
+      <p class="nv-hero-intro">作为持续运营的影像内容品牌，npxvip 官方网站以原创、高清、专业为底座，连接创作者与用户，围绕日常记录、人物访谈、城市探索与创作幕后，构建值得信赖的内容生态。</p>
+      <div class="nv-hero-actions">
+        <a class="nv-btn nv-btn-primary" href="#nv-focus">进入视频焦点</a>
+        <a class="nv-btn nv-btn-ghost" href="#nv-stream">浏览热门内容</a>
+        <button class="nv-btn nv-btn-ghost" id="nvShareBtn" type="button">分享本站</button>
+      </div>
+      <div class="nv-stats">
+        <div class="nv-stat"><b data-count="12800">12,800+</b><small>收录原创作品</small></div>
+        <div class="nv-stat"><b data-count="560">560 位</b><small>认证创作者</small></div>
+        <div class="nv-stat"><b data-count="9200000">920 万</b><small>累计播放时长（分钟）</small></div>
+      </div>
+    </div>
+    <div class="nv-hero-visual">
+      <div class="nv-hero-shot">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff5a3c'/%3E%3Cstop offset='.55' stop-color='%231a2230'/%3E%3Cstop offset='1' stop-color='%230e1116'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g1)'/%3E%3Ccircle cx='610' cy='150' r='110' fill='%23ffc93c' opacity='.28'/%3E%3Ccircle cx='200' cy='430' r='150' fill='%233cd4ff' opacity='.14'/%3E%3Cpath d='M0 470 Q200 380 400 450 T800 420 V600 H0 Z' fill='%230b0e13' opacity='.8'/%3E%3Crect x='90' y='110' width='260' height='150' rx='10' fill='none' stroke='%23ffffff' stroke-opacity='.35' stroke-width='2'/%3E%3Cpath d='M200 165 L250 190 L200 215 Z' fill='%23ffffff' opacity='.75'/%3E%3C/svg%3E" alt="npxvip 品牌主视觉：原创影像生态的城市夜色剪影" width="800" height="600">
+        <div class="nv-hero-play"><i>▶</i></div>
+      </div>
+      <div class="nv-hero-mini">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%231b222b'/%3E%3Cstop offset='1' stop-color='%233cd4ff' stop-opacity='.55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23g2)'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.3' stroke-width='2' fill='none'%3E%3Crect x='90' y='90' width='120' height='120' rx='8'/%3E%3Crect x='260' y='140' width='160' height='90' rx='8'/%3E%3Crect x='460' y='70' width='90' height='190' rx='8'/%3E%3C/g%3E%3Ccircle cx='150' cy='150' r='14' fill='%23ffc93c'/%3E%3C/svg%3E" alt="npxvip 创作者幕后手记封面：剪辑台与时间线示意" width="640" height="360">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 品牌解析 -->
+<section class="nv-sec" id="nv-about">
+  <div class="nv-wrap">
+    <div class="nv-sec-head">
+      <div>
+        <h2><em>01</em>npxvip 是谁：一份关于影像与内容的长期答案</h2>
+        <p>从品牌定位、内容方法到社区生态，系统介绍 npxvip 官方视频门户的理念、结构与坚持。</p>
+      </div>
+      <a class="nv-sec-link" href="#nv-contact">了解合作 →</a>
+    </div>
+    <div class="nv-dynamics">
+      <div>
+        <h3 style="font-size:17px;margin-bottom:12px;color:var(--nv-accent2)">品牌定位与内容方法</h3>
+        <p style="font-size:13.5px;color:#b9c4d0;margin-bottom:14px">npxvip 官方网站从第一天起就把“真实”放在内容标准的第一位。我们不追求情绪的最大化，而追求表达的准确度：一段城市清晨的固定机位、一次长达两小时的创作者访谈、一组未经修饰的手作过程记录，都会被认真地剪辑、调色与校对。平台把内容分为「日常记录」「经验分享」「深度测评」「人物访谈」「创作幕后」「城市探索」「在地文化」「生活方式」「知识科普」「治愈影像」等主线，每条主线都由固定的编辑与创作者共同维护，保证「npxvip全集」不是一个松散的合集，而是一套有结构、可持续更新的内容体系。</p>
+        <p style="font-size:13.5px;color:#b9c4d0;margin-bottom:14px">在方法论上，npxvip 采用「编辑策划 + 创作者共创 + 社区反馈」的三段式流程。前期由编辑团队提出选题方向与拍摄建议，中期由认证创作者完成拍摄与初剪，后期由平台完成技术规范、字幕校对与版权确认。每一部上线的作品都会经过内容复核，确保画面清晰、声音可辨、信息准确。我们相信，专业不是门槛，而是对观看者的基本尊重；也正因如此，npxvip 在用户口碑中逐渐形成了「稳、耐看、值得反复看」的印象。</p>
+        <p style="font-size:13.5px;color:#b9c4d0;margin-bottom:14px">内容生态的建设从来不是单向输出。npxvip 每季度开放一次创作者扶持计划报名，提供设备支持、剪辑指导与曝光资源；每半年发起一次主题挑战与投票活动，把选题权交给社区。平台同时保留「作品墙」与「更新日志」两个长期栏目，前者记录作品，后者记录平台自身的成长轨迹。我们把这种双向的、可回溯的关系称为「陪伴式运营」——不追逐短期热度，而是让内容与用户一起慢慢生长。</p>
+        <p style="font-size:13.5px;color:#b9c4d0">在行业观察层面，npxvip 持续关注影像表达的边界：竖屏与横屏的叙事差异、长视频的节奏控制、纪录片式采访的提问技巧、以及 AI 工具在脚本灵感与字幕生成中的合理位置。这些观察会以专题、访谈与工具指南的形式沉淀在站内，成为创作者的公共资料库。我们希望 npxvip全集不仅是一组可观看的作品集合，更是一份可以被学习、被讨论、被继续书写的行业档案。</p>
+      </div>
+      <div>
+        <ul class="nv-timeline">
+          <li><time>2026 / 11 / 16</time><h4>「城市切片」冬季企划开放报名</h4><p>面向所有认证创作者征集 3–8 分钟的城市观察短片，优秀作品将进入首页焦点位。</p></li>
+          <li><time>2026 / 11 / 08</time><h4>创作者扶持计划第 6 期公示</h4><p>本期共 42 位创作者获得设备与剪辑支持，名单已在官方发布栏目公布。</p></li>
+          <li><time>2026 / 10 / 27</time><h4>npxvip全集品牌故事专题第 12 期上线</h4><p>以「长期主义的内容团队」为主题，记录编辑与创作者的日常协作现场。</p></li>
+          <li><time>2026 / 10 / 12</time><h4>站内搜索与标签筛选能力升级</h4><p>支持按作者、题材、时长三个维度组合筛选，检索结果更贴近真实需求。</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 焦点视频 -->
+<section class="nv-sec" id="nv-focus">
+  <div class="nv-wrap">
+    <div class="nv-sec-head">
+      <div>
+        <h2><em>02</em>视频焦点：本周重点推荐</h2>
+        <p>由编辑团队与创作者共同挑选，覆盖城市探索、人物访谈与创作幕后。</p>
+      </div>
+      <a class="nv-sec-link" href="#nv-stream">查看更多内容 →</a>
+    </div>
+    <div class="nv-focus-grid">
+      <article class="nv-card nv-focus-main">
+        <div class="nv-cover">
+          <span class="nv-tag">品牌故事 · 官方发布</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 540'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a1b18'/%3E%3Cstop offset='.5' stop-color='%23ff5a3c' stop-opacity='.55'/%3E%3Cstop offset='1' stop-color='%230e1116'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='540' fill='url(%23f1)'/%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.28' stroke-width='2'%3E%3Cpath d='M0 420 Q240 340 480 400 T960 360'/%3E%3Cpath d='M0 470 Q240 400 480 450 T960 410'/%3E%3C/g%3E%3Ccircle cx='760' cy='140' r='64' fill='%23ffc93c' opacity='.5'/%3E%3Crect x='120' y='180' width='180' height='110' rx='8' fill='%230e1116' opacity='.55'/%3E%3Cpath d='M190 215 L235 235 L190 255 Z' fill='%23ff5a3c'/%3E%3C/svg%3E" alt="npxvip 品牌故事专题封面：编辑团队在剪辑室讨论长片结构" width="960" height="540">
+          <span class="nv-dur">08:42</span>
+        </div>
+        <div class="nv-body">
+          <h3>把镜头交给时间：npxvip 编辑团队的 180 天记录</h3>
+          <p>从选题会到成片复核，完整记录一支原创短片如何被制作出来。这不是炫技的幕后花絮，而是一群人对内容标准的日常坚持。</p>
+          <div class="nv-meta"><span>npxvip 官方频道</span><span class="nv-dot"></span><span>2026-11-15</span><span class="nv-dot"></span><span>4.2 万次播放</span></div>
+          <div class="nv-ops">
+            <button class="nv-op nv-like" type="button" data-base="3268">♡ 3,268</button>
+            <button class="nv-op nv-fav" type="button">☆ 收藏</button>
+            <button class="nv-op nv-copy" type="button">⧉ 复制链接</button>
+          </div>
+        </div>
+      </article>
+      <div class="nv-focus-side">
+        <article class="nv-card">
+          <div class="nv-cover">
+            <span class="nv-tag">人物访谈</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Crect width='640' height='400' fill='%23151a21'/%3E%3Ccircle cx='320' cy='150' r='88' fill='%233cd4ff' opacity='.22'/%3E%3Ccircle cx='320' cy='150' r='48' fill='%233cd4ff' opacity='.5'/%3E%3Crect x='210' y='250' width='220' height='14' rx='7' fill='%23ffffff' opacity='.18'/%3E%3Crect x='260' y='280' width='120' height='10' rx='5' fill='%23ffffff' opacity='.1'/%3E%3C/svg%3E" alt="人物访谈封面：独立纪录片导演的侧脸剪影" width="640" height="400">
+          </div>
+          <div class="nv-body">
+            <h4>对话独立导演林澜：慢一点，才能看清人</h4>
+            <div class="nv-meta"><span>访谈组</span><span class="nv-dot"></span><span>21:06</span></div>
+          </div>
+        </article>
+        <article class="nv-card">
+          <div class="nv-cover">
+            <span class="nv-tag">城市探索</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Crect width='640' height='400' fill='%23182019'/%3E%3Cpath d='M0 320 L120 220 L220 300 L340 180 L470 280 L640 200 V400 H0 Z' fill='%231f6b46' opacity='.55'/%3E%3Ccircle cx='520' cy='90' r='40' fill='%23ffc93c' opacity='.6'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.25'%3E%3Cpath d='M0 360 H640'/%3E%3C/g%3E%3C/svg%3E" alt="城市探索封面：清晨山路与远山的低饱和风景" width="640" height="400">
+          </div>
+          <div class="nv-body">
+            <h4>六点的山路：一次没有解说词的晨间行走</h4>
+            <div class="nv-meta"><span>在地影像</span><span class="nv-dot"></span><span>12:30</span></div>
+          </div>
+        </article>
+        <article class="nv-card">
+          <div class="nv-cover">
+            <span class="nv-tag">创作幕后</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Crect width='640' height='400' fill='%23211a2c'/%3E%3Cg stroke='%23b78cff' stroke-opacity='.6' stroke-width='2' fill='none'%3E%3Cpath d='M80 300 L180 200 L280 260 L400 140 L520 240'/%3E%3Ccircle cx='180' cy='200' r='7' fill='%23b78cff'/%3E%3Ccircle cx='400' cy='140' r='7' fill='%23b78cff'/%3E%3C/g%3E%3Crect x='80' y='70' width='120' height='12' rx='6' fill='%23ffffff' opacity='.16'/%3E%3C/svg%3E" alt="创作幕后封面：音频波形与时间线的手绘示意图" width="640" height="400">
+          </div>
+          <div class="nv-body">
+            <h4>一支片子的声音是怎么长出来的</h4>
+            <div class="nv-meta"><span>技术组</span><span class="nv-dot"></span><span>09:18</span></div>
+          </div>
+        </article>
+        <article class="nv-card">
+          <div class="nv-cover">
+            <span class="nv-tag">生活方式</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Crect width='640' height='400' fill='%23261d14'/%3E%3Ccircle cx='200' cy='200' r='96' fill='%23ffb35c' opacity='.28'/%3E%3Crect x='330' y='120' width='200' height='160' rx='12' fill='%23ffb35c' opacity='.16'/%3E%3Cpath d='M400 280 q40 -60 80 0' stroke='%23ffffff' stroke-opacity='.35' fill='none' stroke-width='3'/%3E%3C/svg%3E" alt="生活方式封面：午后窗边的一杯手冲咖啡" width="640" height="400">
+          </div>
+          <div class="nv-body">
+            <h4>手冲的十分钟：把一天慢下来</h4>
+            <div class="nv-meta"><span>日常记录</span><span class="nv-dot"></span><span>07:54</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <p class="nv-note">焦点内容每周三更新，编辑推荐不代表唯一标准，欢迎在评论区留下你的看法。</p>
+  </div>
+</section>
+
+<!-- 热门视频流 -->
+<section class="nv-sec" id="nv-stream">
+  <div class="nv-wrap">
+    <div class="nv-sec-head">
+      <div>
+        <h2><em>03</em>热门内容流：从 npxvip全集 里挑出值得反复看的作品</h2>
+        <p>按题材筛选，找到与你此刻状态匹配的那一部。</p>
+      </div>
+      <a class="nv-sec-link" href="#nv-contact">想投稿？点这里 →</a>
+    </div>
+    <div class="nv-filter" id="nvFilter">
+      <button class="nv-chip on" data-filter="all" type="button">全部</button>
+      <button class="nv-chip" data-filter="城市" type="button">城市探索</button>
+      <button class="nv-chip" data-filter="人物" type="button">人物访谈</button>
+      <button class="nv-chip" data-filter="幕后" type="button">创作幕后</button>
+      <button class="nv-chip" data-filter="生活" type="button">生活方式</button>
+      <button class="nv-chip" data-filter="科普" type="button">知识科普</button>
+    </div>
+    <div class="nv-stream" id="nvStream">
+
+      <article class="nv-card nv-item" data-tags="城市 生活">
+        <div class="nv-cover">
+          <span class="nv-tag">城市探索</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%230f1620'/%3E%3Cg fill='%23ff5a3c' opacity='.75'%3E%3Crect x='60' y='200' width='26' height='90'/%3E%3Crect x='110' y='160' width='26' height='130'/%3E%3Crect x='160' y='220' width='26' height='70'/%3E%3C/g%3E%3Cg fill='%233cd4ff' opacity='.4'%3E%3Crect x='420' y='120' width='30' height='170'/%3E%3Crect x='480' y='170' width='30' height='120'/%3E%3C/g%3E%3Cpath d='M0 300 H640' stroke='%23ffffff' stroke-opacity='.2'/%3E%3C/svg%3E" alt="城市夜幕下的老街区灯牌与行人长曝光" width="640" height="360">
+          <span class="nv-dur">14:02</span>
+        </div>
+        <div class="nv-body">
+          <h4>老街区夜行记：灯牌、修表摊和最后一班公交</h4>
+          <p>用一镜到底的步行视角，记录一条正在改造的老街。</p>
+          <div class="nv-meta"><span>阿凛</span><span class="nv-dot"></span><span>6.8 万次播放</span></div>
+          <div class="nv-ops"><button class="nv-op nv-like" type="button" data-base="5120">♡ 5,120</button><button class="nv-op nv-fav" type="button">☆ 收藏</button></div>
+        </div>
+      </article>
+
+      <article class="nv-card nv-item" data-tags="人物 幕后">
+        <div class="nv-cover">
+          <span class="nv-tag">人物访谈</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23171b22'/%3E%3Ccircle cx='320' cy='150' r='70' fill='%23ffc93c' opacity='.35'/%3E%3Cpath d='M250 250 q70 -60 140 0' stroke='%23ffffff' stroke-opacity='.3' fill='none' stroke-width='3'/%3E%3Crect x='120' y='60' width='80' height='8' rx='4' fill='%23ff5a3c'/%3E%3Crect x='120' y='78' width='140' height='8' rx='4' fill='%23ffffff' opacity='.14'/%3E%3C/svg%3E" alt="人物访谈封面：纪录片剪辑师在工作室的前景与背景" width="640" height="360">
+          <span class="nv-dur">26:45</span>
+        </div>
+        <div class="nv-body">
+          <h4>剪了十二年片子的人，怎么判断一个镜头该不该留</h4>
+          <p>和剪辑师老周聊节奏、留白与被删掉的好素材。</p>
+          <div class="nv-meta"><span>访谈组</span><span class="nv-dot"></span><span>3.9 万次播放</span></div>
+          <div class="nv-ops"><button class="nv-op nv-like" type="button" data-base="2840">♡ 2,840</button><button class="nv-op nv-fav" type="button">☆ 收藏</button></div>
+        </div>
+      </article>
+
+      <article class="nv-card nv-item" data-tags="科普 幕后">
+        <div class="nv-cover">
+          <span class="nv-tag">知识科普</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23101822'/%3E%3Cg stroke='%233cd4ff' stroke-opacity='.5' fill='none' stroke-width='2'%3E%3Ccircle cx='200' cy='180' r='70'/%3E%3Ccircle cx='300' cy='180' r='70'/%3E%3Ccircle cx='250' cy='130' r='70'/%3E%3C/g%3E%3Crect x='400' y='100' width='160' height='10' rx='5' fill='%23ffc93c' opacity='.6'/%3E%3Crect x='400' y='130' width='120' height='10' rx='5' fill='%23ffffff' opacity='.2'/%3E%3C/svg%3E" alt="知识科普封面：三原色叠加示意图与文字结构" width="640" height="360">
+          <span class="nv-dur">11:37</span>
+        </div>
+        <div class="nv-body">
+          <h4>为什么同样的画面，调色后像换了一部片</h4>
+          <p>从色彩管理讲到审美判断，一次讲清调色的底层逻辑。</p>
+          <div class="nv-meta"><span>技术组</span><span class="nv-dot"></span><span>5.1 万次播放</span></div>
+          <div class="nv-ops"><button class="nv-op nv-like" type="button" data-base="6400">♡ 6,400</button><button class="nv-op nv-fav" type="button">☆ 收藏</button></div>
+        </div>
+      </article>
+
+      <article class="nv-card nv-item" data-tags="生活 城市">
+        <div class="nv-cover">
+          <span class="nv-tag">生活方式</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%231c2419'/%3E%3Cpath d='M0 260 Q160 200 320 250 T640 230 V360 H0 Z' fill='%232f5a3a' opacity='.6'/%3E%3Ccircle cx='500' cy='90' r='42' fill='%23ffc93c' opacity='.55'/%3E%3Crect x='90' y='120' width='90' height='60' rx='6' fill='%23ffffff' opacity='.12'/%3E%3C/svg%3E" alt="生活方式封面：阳台上的绿植与午后斜射阳光" width="640" height="360">
+          <span class="nv-dur">06:21</span>
+        </div>
+        <div class="nv-body">
+          <h4>把三平米阳台改成阅读角，我只花了两个周末</h4>
+          <p>从测量到收纳，全流程记录小空间改造。</p>
+          <div class="nv-meta"><span>小满</span><span class="nv-dot"></span><span>7.4 万次播放</span></div>
+          <div class="nv-ops"><button class="nv-op nv-like" type="button" data-base="7800">♡ 7,800</button><button class="nv-op nv-fav" type="button">☆ 收藏</button></div>
+        </div>
+      </article>
+
+      <article class="nv-card nv-item" data-tags="城市 幕后">
+        <div class="nv-cover">
+          <span class="nv-tag">创作幕后</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23201816'/%3E%3Crect x='80' y='80' width='220' height='140' rx='8' fill='%23ff5a3c' opacity='.25'/%3E%3Crect x='340' y='120' width='220' height='100' rx='8' fill='%23ffc93c' opacity='.22'/%3E%3Cpath d='M80 300 h480' stroke='%23ffffff' stroke-opacity='.2'/%3E%3Ccircle cx='520' cy='80' r='26' fill='%23ffffff' opacity='.16'/%3E%3C/svg%3E" alt="创作幕后封面：分镜脚本手稿与摄像机摆放示意" width="640" height="360">
+          <span class="nv-dur">17:09</span>
+        </div>
+        <div class="nv-body">
+          <h4>预算三万拍一支城市短片：设备清单与踩坑记录</h4>
+          <p>把钱花在该花的地方，附完整器材与拍摄日程表。</p>
+          <div class="nv-meta"><span>阿凛</span><span class="nv-dot"></span><span>4.6 万次播放</span></div>
+          <div class="nv-ops"><button class="nv-op nv-like" type="button" data-base="3600">♡ 3,600</button><button class="nv-op nv-fav" type="button">☆ 收藏</button></div>
+        </div>
+      </article>
+
+      <article class="nv-card nv-item" data-tags="人物 生活">
+        <div class="nv-cover">
+          <span class="nv-tag">人物访谈</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23241a26'/%3E%3Ccircle cx='250' cy='160' r='60' fill='%23b78cff' opacity='.35'/%3E%3Ccircle cx='380' cy='190' r='44' fill='%23ff8a3c' opacity='.35'/%3E%3Crect x='90' y='280' width='180' height='10' rx='5' fill='%23ffffff' opacity='.16'/%3E%3C/svg%3E" alt="人物访谈封面：两位女性主理人对坐交谈的中景" width="640" height="360">
+          <span class="nv-dur">19:22</span>
+        </div>
+        <div class="nv-body">
+          <h4>两个女生开书店的第三年：账本、选书与深夜值班</h4>
+          <p>不浪漫化创业，聊聊真实的经营与取舍。</p>
+          <div class="nv-meta"><span>小满</span><span class="nv-dot"></span><span>3.2 万次播放</span></div>
+          <div class="nv-ops"><button class="nv-op nv-like" type="button" data-base="2460">♡ 2,460</button><button class="nv-op nv-fav" type="button">☆ 收藏</button></div>
+        </div>
+      </article>
+
+      <article class="nv-card nv-item" data-tags="科普 生活">
+        <div class="nv-cover">
+          <span class="nv-tag">知识科普</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23131b1c'/%3E%3Cg fill='%233cd4ff' opacity='.4'%3E%3Crect x='90' y='220' width='40' height='70'/%3E%3Crect x='150' y='180' width='40' height='110'/%3E%3Crect x='210' y='140' width='40' height='150'/%3E%3Crect x='270' y='190' width='40' height='100'/%3E%3C/g%3E%3Crect x='380' y='110' width='180' height='12' rx='6' fill='%23ffc93c' opacity='.6'/%3E%3Crect x='380' y='140' width='120' height='12' rx='6' fill='%23ffffff' opacity='.18'/%3E%3C/svg%3E" alt="知识科普封面：数据柱状图与讲解字幕版式" width="640" height="360">
+          <span class="nv-dur">13:50</span>
+        </div>
+        <div class="nv-body">
+          <h4>内容平台的推荐逻辑，普通人该怎么理解</h4>
+          <p>用最少的术语，讲清内容分发与完播率的关系。</p>
+          <div class="nv-meta"><span>npxvip 编辑部</span><span class="nv-dot"></span><span>2.8 万次播放</span></div>
+          <div class="nv-ops"><button class="nv-op nv-like" type="button" data-base="1980">♡ 1,980</button><button class="nv-op nv-fav" type="button">☆ 收藏</button></div>
+        </div>
+      </article>
+
+      <article class="nv-card nv-item" data-tags="幕后 科普">
+        <div class="nv-cover">
+          <span class="nv-tag">创作幕后</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%231a1e14'/%3E%3Cpath d='M0 250 Q160 190 320 240 T640 210 V360 H0 Z' fill='%2340702e' opacity='.55'/%3E%3Ccircle cx='480' cy='90' r='36' fill='%23ffc93c' opacity='.5'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.3' stroke-width='2' fill='none'%3E%3Crect x='90' y='100' width='90' height='60' rx='6'/%3E%3C/g%3E%3C/svg%3E" alt="创作幕后封面：户外拍摄现场的监视器与三脚架" width="640" height="360">
+          <span class="nv-dur">15:33</span>
+        </div>
+        <div class="nv-body">
+          <h4>户外拍摄怎么应对突变天气：一份实用清单</h4>
+          <p>从防潮到备份，把不可控降到最低。</p>
+          <div class="nv-meta"><span>林澜</span><span class="nv-dot"></span><span>2.1 万次播放</span></div>
+          <div class="nv-ops"><button class="nv-op nv-like" type="button" data-base="1520">♡ 1,520</button><button class="nv-op nv-fav" type="button">☆ 收藏</button></div>
+        </div>
+      </article>
+
+      <article class="nv-card nv-item" data-tags="生活 城市">
+        <div class="nv-cover">
+          <span class="nv-tag">日常记录</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%231f1a14'/%3E%3Ccircle cx='320' cy='180' r='110' fill='%23ff8a3c' opacity='.2'/%3E%3Cg stroke='%23ffc93c' stroke-opacity='.6' stroke-width='3' fill='none'%3E%3Cpath d='M120 300 q80 -120 200 -40 t200 -60'/%3E%3C/g%3E%3Crect x='430' y='80' width='120' height='9' rx='4' fill='%23ffffff' opacity='.2'/%3E%3C/svg%3E" alt="日常记录封面：厨房里的面粉、手与木质案板" width="640" height="360">
+          <span class="nv-dur">05:44</span>
+        </div>
+        <div class="nv-body">
+          <h4>周末的面包实验：失败两次之后的第三次</h4>
+          <p>不追求完美成品，只记录真实的过程。</p>
+          <div class="nv-meta"><span>小满</span><span class="nv-dot"></span><span>5.6 万次播放</span></div>
+          <div class="nv-ops"><button class="nv-op nv-like" type="button" data-base="5820">♡ 5,820</button><button class="nv-op nv-fav" type="button">☆ 收藏</button></div>
+        </div>
+      </article>
+
+    </div>
+    <p class="nv-note">以上作品均为平台原创内容，转载与合作请联系官方邮箱，尊重版权是我们共同的前提。</p>
+  </div>
+</section>
+
+<!-- 专题企划 -->
+<section class="nv-sec" id="nv-special">
+  <div class="nv-wrap">
+    <div class="nv-sec-head">
+      <div>
+        <h2><em>04</em>专题企划：围绕主题的深度内容集合</h2>
+        <p>每个专题由编辑统筹、多位创作者共同完成，持续更新中。</p>
+      </div>
+    </div>
+    <div class="nv-special">
+      <article class="nv-special-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 320'%3E%3Crect width='640' height='320' fill='%231b1f2a'/%3E%3Cg fill='%23ff5a3c' opacity='.7'%3E%3Crect x='60' y='160' width='22' height='90'/%3E%3Crect x='100' y='120' width='22' height='130'/%3E%3Crect x='140' y='190' width='22' height='60'/%3E%3C/g%3E%3Ccircle cx='480' cy='110' r='60' fill='%23ffc93c' opacity='.35'/%3E%3C/svg%3E" alt="城市切片专题封面：多座城市天际线的拼贴" width="640" height="320">
+        <div class="nv-special-body">
+          <h3>城市切片 · 冬季企划</h3>
+          <p>十座城市、十位创作者，用 3–8 分钟记录一个街区在冬天的样子。</p>
+          <span class="nv-badge">更新中 · 第 3 期</span>
+        </div>
+      </article>
+      <article class="nv-special-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 320'%3E%3Crect width='640' height='320' fill='%23221a24'/%3E%3Ccircle cx='220' cy='160' r='64' fill='%23b78cff' opacity='.4'/%3E%3Ccircle cx='380' cy='160' r='64' fill='%23ff8a3c' opacity='.35'/%3E%3Cpath d='M300 60 v200' stroke='%23ffffff' stroke-opacity='.2'/%3E%3C/svg%3E" alt="幕后手记专题封面：两盏灯与一条分界线" width="640" height="320">
+        <div class="nv-special-body">
+          <h3>幕后手记 · 创作者自述</h3>
+          <p>不打光、不摆拍的访谈，聊作品背后的犹豫与决定。</p>
+          <span class="nv-badge">共 12 期 · 完结</span>
+        </div>
+      </article>
+      <article class="nv-special-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 320'%3E%3Crect width='640' height='320' fill='%23142018'/%3E%3Cpath d='M0 240 Q160 180 320 230 T640 200 V320 H0 Z' fill='%232f6b46' opacity='.65'/%3E%3Ccircle cx='120' cy='90' r='36' fill='%23ffc93c' opacity='.5'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.22'%3E%3Cpath d='M380 90 l40 -30 l40 30 v60 h-80 Z' fill='none'/%3E%3C/g%3E%3C/svg%3E" alt="慢生活专题封面：山间小屋与清晨薄雾" width="640" height="320">
+        <div class="nv-special-body">
+          <h3>慢生活实验室</h3>
+          <p>关于收纳、烹饪、园艺与阅读的长期记录，更新节奏不快，但稳定。</p>
+          <span class="nv-badge">长期连载 · 每周更新</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 创作者矩阵 -->
+<section class="nv-sec" id="nv-creators">
+  <div class="nv-wrap">
+    <div class="nv-sec-head">
+      <div>
+        <h2><em>05</em>创作者矩阵：npxvip官网 认证的长期合作者</h2>
+        <p>他们来自不同领域，但共享同一种对内容的认真。</p>
+      </div>
+      <a class="nv-sec-link" href="#nv-contact">申请认证 →</a>
+    </div>
+    <div class="nv-creators">
+      <article class="nv-creator">
+        <div class="nv-avatar" style="background:linear-gradient(135deg,#ff5a3c,#ffc93c)">凛</div>
+        <h4>阿凛</h4>
+        <div class="nv-field">城市探索 · 长镜头</div>
+        <p>习惯用步行视角记录城市，作品节奏克制，偏爱自然声。</p>
+        <div class="nv-nums"><span><b>86</b>作品</span><span><b>12.4 万</b>粉丝</span></div>
+        <button class="nv-op nv-author" type="button" data-author="阿凛">查看作者信息</button>
+      </article>
+      <article class="nv-creator">
+        <div class="nv-avatar" style="background:linear-gradient(135deg,#3cd4ff,#5a7cff)">澜</div>
+        <h4>林澜</h4>
+        <div class="nv-field">人物访谈 · 纪录片</div>
+        <p>独立纪录片导演，擅长把采访做成一次安静的对话。</p>
+        <div class="nv-nums"><span><b>54</b>作品</span><span><b>9.7 万</b>粉丝</span></div>
+        <button class="nv-op nv-author" type="button" data-author="林澜">查看作者信息</button>
+      </article>
+      <article class="nv-creator">
+        <div class="nv-avatar" style="background:linear-gradient(135deg,#b78cff,#ff8a3c)">满</div>
+        <h4>小满</h4>
+        <div class="nv-field">生活方式 · 家居</div>
+        <p>关注小空间与日常质感，视频里有大量真实的手部特写。</p>
+        <div class="nv-nums"><span><b>112</b>作品</span><span><b>18.2 万</b>粉丝</span></div>
+        <button class="nv-op nv-author" type="button" data-author="小满">查看作者信息</button>
+      </article>
+      <article class="nv-creator">
+        <div class="nv-avatar" style="background:linear-gradient(135deg,#ffc93c,#4fd18b)">周</div>
+        <h4>老周</h4>
+        <div class="nv-field">剪辑 · 技术指南</div>
+        <p>从业十二年的剪辑师，愿意把方法论讲给刚入门的人听。</p>
+        <div class="nv-nums"><span><b>73</b>作品</span><span><b>11.5 万</b>粉丝</span></div>
+        <button class="nv-op nv-author" type="button" data-author="老周">查看作者信息</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 故事随笔 + 榜单 -->
+<section class="nv-sec" id="nv-stories">
+  <div class="nv-wrap">
+    <div class="nv-sec-head">
+      <div>
+        <h2><em>06</em>故事与随笔：影像之外的文字记录</h2>
+        <p>有些感受不适合放进片子里，就写下来。</p>
+      </div>
+    </div>
+    <div class="nv-stories">
+      <article class="nv-story">
+        <h3>在凌晨四点的菜市场，我学会了不打断</h3>
+        <p>拍城市题材最容易犯的错，是把自己的想象强加给拍摄对象。那天跟着一位摊主走了三个小时，我才明白，最好的镜头往往来自等待，而不是追问。回来之后我们删掉了所有旁白，只留下环境声和一句“今天的青菜很新鲜”。</p>
+        <footer>阿凛 · 2026-11-10</footer>
+      </article>
+      <article class="nv-story">
+        <h3>为什么我们坚持不做十秒反转</h3>
+        <p>短内容有它的价值，但 npxvip 更愿意把时间给到需要时间的内容。一次完整的访谈、一段不加速的黄昏，都是对观看者的信任。数据会短期低迷，但长期看，愿意坐下来的人一直存在。</p>
+        <footer>npxvip 编辑部 · 2026-11-05</footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 榜单 -->
+<section class="nv-sec" id="nv-rank">
+  <div class="nv-wrap">
+    <div class="nv-sec-head">
+      <div>
+        <h2><em>07</em>数据榜单：本周热度、新人、口碑</h2>
+        <p>榜单只作为参考，不代表内容价值的全部。</p>
+      </div>
+    </div>
+    <div class="nv-rank">
+      <div class="nv-rank-col">
+        <h3>热度榜</h3>
+        <ul>
+          <li><b>1</b><span>把镜头交给时间：编辑团队的 180 天记录</span><em>4.2 万</em></li>
+          <li><b>2</b><span>老街区夜行记：灯牌与最后一班公交</span><em>3.6 万</em></li>
+          <li><b>3</b><span>为什么同样的画面，调色后像换了一部片</span><em>3.1 万</em></li>
+          <li><b>4</b><span>预算三万拍一支城市短片</span><em>2.8 万</em></li>
+        </ul>
+      </div>
+      <div class="nv-rank-col">
+        <h3>新人榜</h3>
+        <ul>
+          <li><b>1</b><span>纸鸢 · 记录乡镇集市的四季</span><em>新晋</em></li>
+          <li><b>2</b><span>木里 · 木工手作的慢镜头</span><em>新晋</em></li>
+          <li><b>3</b><span>南岸 · 下班后的沿江公路</span><em>新晋</em></li>
+          <li><b>4</b><span>七号 · 旧相机拆解修复</span><em>新晋</em></li>
+        </ul>
+      </div>
+      <div class="nv-rank-col">
+        <h3>口碑榜</h3>
+        <ul>
+          <li><b>1</b><span>剪了十二年片子的人</span><em>9.6 分</em></li>
+          <li><b>2</b><span>两个女生开书店的第三年</span><em>9.4 分</em></li>
+          <li><b>3</b><span>户外拍摄怎么应对突变天气</span><em>9.3 分</em></li>
+          <li><b>4</b><span>周末的面包实验</span><em>9.1 分</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评价 -->
+<section class="nv-sec" id="nv-comments">
+  <div class="nv-wrap">
+    <div class="nv-sec-head">
+      <div>
+        <h2><em>08</em>社区声音：真实评价与建议</h2>
+        <p>来自不同观看者与创作者的反馈，帮助我们继续把内容做好。</p>
+      </div>
+    </div>
+    <div class="nv-comments">
+      <article class="nv-comment">
+        <div class="nv-comment-head"><div class="nv-avatar" style="background:linear-gradient(135deg,#ff5a3c,#ffc93c)">程</div><div><b>程未眠</b><small>内容运营 · 关注 1 年</small></div></div>
+        <p>很少见到一个视频站点会把更新日志写得这么认真，能感觉到平台确实在持续迭代，而不是上线后就不管了。</p>
+        <div class="nv-stars">★★★★★</div>
+      </article>
+      <article class="nv-comment">
+        <div class="nv-comment-head"><div class="nv-avatar" style="background:linear-gradient(135deg,#3cd4ff,#5a7cff)">木</div><div><b>木里手作</b><small>认证创作者 · 关注 8 个月</small></div></div>
+        <p>投稿流程比我预想的清晰，编辑给的修改意见也很具体。虽然第一次没过，但按照建议重剪之后效果好了很多。</p>
+        <div class="nv-stars">★★★★★</div>
+      </article>
+      <article class="nv-comment">
+        <div class="nv-comment-head"><div class="nv-avatar" style="background:linear-gradient(135deg,#b78cff,#ff8a3c)">南</div><div><b>南岸公路</b><small>普通用户 · 关注 2 年</small></div></div>
+        <p>喜欢这里的访谈，问的问题不着急，愿意留白。缺点是有些好片子藏在专题里，不太好找。</p>
+        <div class="nv-stars">★★★★☆</div>
+      </article>
+      <article class="nv-comment">
+        <div class="nv-comment-head"><div class="nv-avatar" style="background:linear-gradient(135deg,#ffc93c,#4fd18b)">纸</div><div><b>纸鸢</b><small>新人创作者</small></div></div>
+        <p>扶持计划给了设备支持，还安排了剪辑指导。作为刚起步的人，这种帮助比我之前自己摸索一年都管用。</p>
+        <div class="nv-stars">★★★★★</div>
+      </article>
+      <article class="nv-comment">
+        <div class="nv-comment-head"><div class="nv-avatar" style="background:linear-gradient(135deg,#4fd18b,#3cd4ff)">乔</div><div><b>乔一</b><small>剪辑爱好者</small></div></div>
+        <p>技术类内容干货足够，就是希望以后能出配套的素材包，跟着练一遍会更扎实。</p>
+        <div class="nv-stars">★★★★☆</div>
+      </article>
+      <article class="nv-comment">
+        <div class="nv-comment-head"><div class="nv-avatar" style="background:linear-gradient(135deg,#ff8a3c,#ff5a3c)">言</div><div><b>言午</b><small>企业观众</small></div></div>
+        <p>我们团队把慢生活实验室当午休固定节目，节奏舒服，也不觉得在浪费时间。这种内容现在很难得。</p>
+        <div class="nv-stars">★★★★★</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="nv-sec" id="nv-faq">
+  <div class="nv-wrap">
+    <div class="nv-sec-head">
+      <div>
+        <h2><em>09</em>帮助中心：关于 npxvip 的常见问题</h2>
+        <p>如果没有找到答案，欢迎通过页面底部的联系方式与我们沟通。</p>
+      </div>
+    </div>
+    <div class="nv-faq">
+      <details open>
+        <summary>npxvip 是一个什么样的视频品牌？</summary>
+        <p>npxvip 是以原创影像为核心的视频内容品牌与社区，官方网站集中呈现焦点内容、专题企划、创作者档案与品牌动态，强调真实、专业与长期运营。</p>
+      </details>
+      <details>
+        <summary>如何成为认证创作者并投稿？</summary>
+        <p>点击页头的「投稿入口」填写基础信息与作品链接，编辑团队会在 5 个工作日内回复。通过初审后可参加创作者扶持计划，获得剪辑指导与曝光资源。</p>
+      </details>
+      <details>
+        <summary>站内内容支持哪些观看方式？</summary>
+        <p>所有内容均支持高清播放，页面提供按题材、作者与时长筛选的能力，方便快速定位感兴趣的作品。</p>
+      </details>
+      <details>
+        <summary>作品版权如何确认？</summary>
+        <p>平台仅收录经创作者授权的原创内容，并保留作品署名。转载、二次剪辑与合作请联系官方邮箱，未经许可请勿商用。</p>
+      </details>
+      <details>
+        <summary>专题企划的参与方式是怎样的？</summary>
+        <p>每期专题会提前在「企业动态」与公告条发布征集说明，创作者按当期主题提交作品即可参与评比与投票。</p>
+      </details>
+      <details>
+        <summary>是否支持企业或品牌合作？</summary>
+        <p>支持。合作形式包括专题共建、创作者共创与内容定制，具体可在联系区留下需求，我们会安排专人对接。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 联系 -->
+<section class="nv-sec" id="nv-contact">
+  <div class="nv-wrap">
+    <div class="nv-contact-card">
+      <div>
+        <h2>与 npxvip 一起，把下一部作品做得更好</h2>
+        <p>无论你是创作者、品牌方还是长期观众，都欢迎与我们联系。我们更愿意回答问题、听完想法，再谈合作。</p>
+        <div class="nv-hero-actions">
+          <button class="nv-btn nv-btn-primary" id="nvContactBtn" type="button">提交合作咨询</button>
+          <button class="nv-btn nv-btn-ghost nv-copy" type="button">复制官方邮箱</button>
+          <button class="nv-btn nv-btn-ghost" id="nvReportBtn" type="button">反馈与建议</button>
+        </div>
+      </div>
+      <div class="nv-contact-info">
+        <div><b>官方邮箱</b> · brand@npxvip.example</div>
+        <div><b>合作方向</b> · 专题共建 / 内容定制 / 创作者共创</div>
+        <div><b>投稿时间</b> · 每周一至周五 10:00–18:00</div>
+        <div><b>办公地址</b> · 城市影像产业园 A 座 6 层</div>
+        <div><b>合作品牌</b> · 已与多家影像器材与文创品牌建立长期合作</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="nv-footer">
+  <div class="nv-wrap">
+    <div class="nv-footer-grid">
+      <div class="nv-footer-brand">
+        <a class="nv-brand" href="#nv-home">
+          <span class="nv-brand-mark">NP</span>
+          <span class="nv-brand-txt"><strong>npxvip</strong><em>OFFICIAL VIDEO</em></span>
+        </a>
+        <p>npxvip 官方网站，持续运营的原创影像内容平台。我们相信真实与专业的力量，愿与创作者和用户一起，把有价值的内容留下来。</p>
+      </div>
+      <div>
+        <h4>浏览</h4>
+        <ul>
+          <li><a href="#nv-focus">视频焦点</a></li>
+          <li><a href="#nv-stream">热门内容</a></li>
+          <li><a href="#nv-special">专题企划</a></li>
+          <li><a href="#nv-rank">数据榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#nv-creators">创作者矩阵</a></li>
+          <li><a href="#nv-contact">投稿与合作</a></li>
+          <li><a href="#nv-faq">帮助中心</a></li>
+          <li><a href="#nv-about">品牌故事</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#nv-about">企业动态</a></li>
+          <li><a href="#nv-comments">社区声音</a></li>
+          <li><a href="#nv-contact">联系方式</a></li>
+          <li><a href="#nv-home">返回首页</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nv-footer-bottom">
+      <span>© 2026 npxvip 官方网站 · 版权所有 · 持续运营中</span>
+      <span>原创正版内容 · 尊重版权 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<button class="nv-top" id="nvTop" type="button" aria-label="回到顶部">↑</button>
+<div class="nv-toast" id="nvToast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="nv-modal" id="nvModal" role="dialog" aria-modal="true">
+  <div class="nv-modal-box">
+    <button class="nv-modal-close" id="nvModalClose" type="button" aria-label="关闭">×</button>
+    <h3 id="nvModalTitle">标题</h3>
+    <p id="nvModalDesc">描述</p>
+    <div id="nvModalBody"></div>
+    <button class="nv-btn nv-btn-primary" id="nvModalOk" type="button" style="width:100%;margin-top:6px">知道了</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toast = document.getElementById('nvToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('on'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('nvBurger');
+  var nav = document.getElementById('nvNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '✕' : '☰';
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 960){
+      nav.classList.remove('open');
+      burger.textContent = '☰';
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('nvSearchInput');
+  var searchBtn = document.getElementById('nvSearchBtn');
+  var searchTip = document.getElementById('nvSearchTip');
+  var searchTimer = null;
+  function doSearch(){
+    var kw = searchInput.value.trim();
+    if(!kw){
+      searchTip.textContent = '试试输入：城市、访谈、调色、慢生活';
+      searchTip.classList.add('on');
+    }else{
+      searchTip.textContent = '已按「' + kw + '」检索，共匹配到 12 条相关作品';
+      searchTip.classList.add('on');
+      showToast('正在为你筛选与「' + kw + '」相关的内容');
+    }
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(function(){ searchTip.classList.remove('on'); }, 3200);
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') doSearch(); });
+  searchInput.addEventListener('input', function(){
+    if(searchInput.value.trim().length >= 2){
+      searchTip.textContent = '按回车查看「' + searchInput.value.trim() + '」相关内容';
+      searchTip.classList.add('on');
+    }else{
+      searchTip.classList.remove('on');
+    }
+  });
+
+  /* 标签筛选 */
+  var chips = document.querySelectorAll('#nvFilter .nv-chip');
+  var items = document.querySelectorAll('#nvStream .nv-item');
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('on'); });
+      chip.classList.add('on');
+      var f = chip.getAttribute('data-filter');
+      var count = 0;
+      items.forEach(function(item){
+        var tags = item.getAttribute('data-tags') || '';
+        var show = (f === 'all') || tags.indexOf(f) > -1;
+        item.style.display = show ? '' : 'none';
+        if(show) count++;
+      });
+      showToast('已筛选出 ' + count + ' 部相关作品');
+    });
+  });
+
+  /* 点赞 */
+  document.querySelectorAll('.nv-like').forEach(function(btn){
+    var base = parseInt(btn.getAttribute('data-base') || '0', 10);
+    var active = false;
+    btn.addEventListener('click', function(){
+      active = !active;
+      var n = active ? base + 1 : base;
+      btn.textContent = (active ? '♥ ' : '♡ ') + n.toLocaleString('en-US');
+      btn.classList.toggle('on', active);
+    });
+  });
+
+  /* 收藏 */
+  document.querySelectorAll('.nv-fav').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('on');
+      btn.textContent = on ? '★ 已收藏' : '☆ 收藏';
+      showToast(on ? '已加入收藏' : '已取消收藏');
+    });
+  });
+
+  /* 复制链接 */
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function(resolve){
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand('copy'); }catch(e){}
+      document.body.removeChild(ta);
+      resolve();
+    });
+  }
+  document.querySelectorAll('.nv-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      copyText('brand@npxvip.example').then(function(){
+        showToast('官方邮箱已复制，欢迎来信');
+      }).catch(function(){
+        showToast('复制失败，请手动记录：brand@npxvip.example');
+      });
+    });
+  });
+  document.querySelectorAll('.nv-op.nv-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      copyText('npxvip 官网 · 原创影像内容生态');
+      showToast('作品链接已复制，可分享给朋友');
+    });
+  });
+
+  /* 作者信息弹窗 */
+  var modal = document.getElementById('nvModal');
+  var modalTitle = document.getElementById('nvModalTitle');
+  var modalDesc = document.getElementById('nvModalDesc');
+  var modalBody = document.getElementById('nvModalBody');
+  var modalOk = document.getElementById('nvModalOk');
+
+  function openModal(title, desc, bodyHtml){
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc || '';
+    modalBody.innerHTML = bodyHtml || '';
+    modal.classList.add('on');
+  }
+  function closeModal(){ modal.classList.remove('on'); }
+
+  document.getElementById('nvModalClose').addEventListener('click', closeModal);
+  modalOk.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  var authorData = {
+    '阿凛': '城市探索创作者，擅长步行视角与自然声采集，代表专题《城市切片》。合作过 12 个城市影像项目。',
+    '林澜': '独立纪录片导演，长期关注普通人的职业与生活，访谈代表作《慢一点，才能看清人》。',
+    '小满': '生活方式创作者，专注小空间改造与日常质感，作品强调可复制的实用经验。',
+    '老周': '从业十二年的剪辑师，负责平台技术指南栏目，主讲节奏、留白与素材取舍。'
+  };
+  document.querySelectorAll('.nv-author').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author');
+      openModal(name + ' · 创作者档案', 'npxvip 官网认证创作者', '<p style="font-size:13px;color:#9aa7b5">' + (authorData[name] || '这位创作者正在整理个人简介。') + '</p>');
+    });
+  });
+
+  /* 投稿 / 合作 / 反馈 弹窗 */
+  document.getElementById('nvSubmitBtn').addEventListener('click', function(){
+    openModal('投稿入口', '填写作品信息，编辑团队会在 5 个工作日内回复。',
+      '<input type="text" placeholder="你的昵称 / 创作者名称">' +
+      '<input type="text" placeholder="作品标题">' +
+      '<textarea rows="3" placeholder="一句话介绍你的作品与创作思路"></textarea>');
+    modalOk.textContent = '提交（演示）';
+    modalOk.onclick = function(){ closeModal(); modalOk.textContent = '知道了'; modalOk.onclick = closeModal; showToast('投稿信息已记录，感谢你的信任'); };
+  });
+
+  document.getElementById('nvContactBtn').addEventListener('click', function(){
+    openModal('合作咨询', '请留下需求概要，我们会安排对应同事与你联系。',
+      '<input type="text" placeholder="联系人或品牌名称">' +
+      '<input type="text" placeholder="联系方式（邮箱 / 电话）">' +
+      '<textarea rows="3" placeholder="合作方向与大致需求"></textarea>');
+    modalOk.textContent = '发送（演示）';
+    modalOk.onclick = function(){ closeModal(); modalOk.textContent = '知道了'; modalOk.onclick = closeModal; showToast('咨询已提交，我们会尽快回复'); };
+  });
+
+  document.getElementById('nvReportBtn').addEventListener('click', function(){
+    openModal('反馈与建议', '遇到问题或有改进建议？写在这里就好。',
+      '<textarea rows="4" placeholder="请描述你遇到的问题或建议"></textarea>');
+    modalOk.textContent = '提交反馈（演示）';
+    modalOk.onclick = function(){ closeModal(); modalOk.textContent = '知道了'; modalOk.onclick = closeModal; showToast('反馈已收到，感谢你帮助平台变得更好'); };
+  });
+
+  /* 分享 */
+  document.getElementById('nvShareBtn').addEventListener('click', function(){
+    openModal('分享 npxvip 官网', '把这里分享给同样喜欢认真内容的朋友。',
+      '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+      '<button class="nv-btn nv-btn-ghost" type="button" data-share="微信">微信</button>' +
+      '<button class="nv-btn nv-btn-ghost" type="button" data-share="微博">微博</button>' +
+      '<button class="nv-btn nv-btn-ghost" type="button" data-share="QQ">QQ</button>' +
+      '<button class="nv-btn nv-btn-ghost" type="button" data-share="复制链接">复制链接</button>' +
+      '</div>');
+    modalOk.textContent = '关闭';
+    modalOk.onclick = function(){ closeModal(); modalOk.onclick = closeModal; };
+    modalBody.querySelectorAll('[data-share]').forEach(function(b){
+      b.addEventListener('click', function(){
+        var ch = b.getAttribute('data-share');
+        if(ch === '复制链接'){
+          copyText('npxvip 官网 · 原创影像内容生态');
+          showToast('链接已复制');
+        }else{
+          showToast('已生成 ' + ch + ' 分享提示');
+        }
+      });
+    });
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('nvTop');
+  window.addEventListener('scroll', function(){
+    topBtn.classList.toggle('on', window.scrollY > 600);
+  });
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+    </html>
